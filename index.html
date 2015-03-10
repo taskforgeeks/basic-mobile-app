@@ -4,25 +4,50 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-		.iframe{
-			position:fixed;
-			height:100%;
-			width:100%;
-			left:0;
-			top:0;
-		}
-		</style>
+		<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 	</head>
 	<body>
-		<iframe src="http://taskforgeeks.net/devs/reserved/#/login" class="iframe"></iframe>
+		<!-- Start of first page I -->
+		<div data-role="page" id="page1">
+			<!-- Header -->
+			<div data-role="header">
+				<h1>Sample Apps &amp;</h1>
+			</div>
+			<!-- /header -->
+			<!-- Content -->
+			<div data-role="content">
+				<h3>Content</h3>
+				<p>Blah blah blah blah</p>
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer">
+				<h4>&copy; 2013 Your Name</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		<!-- /page -->
 	</body>
 </html>
 <script>
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-	document.addEventListener("pause", onPause, false);
-	document.addEventListener("resume", onResume, false);
-	alert("Device is Ready");
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady() {
+		document.addEventListener("pause", onPause, false);
+		document.addEventListener("resume", onResume, false);
+		alert("Device is Ready");
+	}
+
+
+//What to do when paused
+function onPause(){
+	
+	alert("paused!");
+}
+
+//What to do when resumed
+function onResume()
+{
+	
+	alert("resume");
 }
 </script>
